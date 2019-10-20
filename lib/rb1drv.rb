@@ -7,7 +7,7 @@ module Rb1drv
   #
   # Call +#root+ or +#get+ to get an +OneDriveDir+ or +OneDriveFile+ to wotk with.
   class OneDrive
-    attr_reader :oauth2_client, :logger, :access_token, :conn
+    attr_accessor :oauth2_client, :logger, :access_token, :conn
     # Instanciates with app id and secret.
     def initialize(client_id, client_secret, callback_url, logger=nil)
       @client_id = client_id
